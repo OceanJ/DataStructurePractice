@@ -1,14 +1,13 @@
 #include "SimpleList.h"
 void PrintList(List L)
 {
-	printf("Delete the Last Positon:\n");
-	Position P = L->Next;
-	while (P->Next!=NULL);
+	Position P = L;
+	while (P->Next != NULL)
 	{
-		printf("%d ->", Retrieve(P));
-		
+		P = P->Next;
+		printf("%d --->", P->Element);
 	}
-	printf("&d \n", Retrieve(P));
+	printf("\n");
 }
 int main(int argc, char* argvs[])
 {
@@ -20,6 +19,7 @@ int main(int argc, char* argvs[])
 	for (int i = 0; i < 10; i++)
 	{
 		Insert(i*i, TestList, P);
+		P = P->Next;
 	}
 	printf("Insert:\n");
 	PrintList(TestList);

@@ -47,7 +47,7 @@ void DeleteFromValue(ElementType X, List L)
 {
 	Position Previous, TmpCell;
 	Previous = L;
-	while (Previous != NULL&&Previous->Next->Element != X)
+	while (Previous->Next!= NULL&&Previous->Next->Element != X)
 		Previous = Previous->Next;
 	if (Previous != NULL)
 	{
@@ -94,7 +94,7 @@ Position Advance(Position P)
 {
 	return P->Next;
 }
-ElementType Retrieve(Position P)
-{
-	return P->Element;
-}
+//ElementType Retrieve(Position P)
+//{
+//	return P->Element;
+//}
