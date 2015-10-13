@@ -1,10 +1,12 @@
-#include <iostream>
-using namespace std;
 /*
 动态规划：Max[i]表示以A[i]结尾的最大子序列积，Min[i]表示以A[i]结尾的最大子序列积
 Max[i]=Max3(A[i],Max[i-1]*A[i],Min[i-1]*A[i]);
 Min[i]=Min3(A[i],Max[i-1]*A[i],Min[i-1]*A[i]);
 */
+
+#include <iostream>
+using namespace std;
+
 double Max3(double A, double B, double C)
 {
 	double Max = A > B ? A : B;
