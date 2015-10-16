@@ -1,18 +1,18 @@
-#include "Stack_List.h"
+#include "Stack_Array.h"
 void PrintStack(Stack S)
 {
-	PtrToNode Ptr=S;
-	cout << "Stack¡¡: ";
-	while (Ptr = Ptr->Next)
+	cout << "Top>>";
+	for (int i = S->TopOfStack ; i >= 0 ;i--)
 	{
-		cout << Ptr->Element<<" << ";
+		cout << S->Array[i]<<" >> ";
 	}
+	cout << "End ";
 	cout << endl;
 }
 int main()
 {
 	cout << "Creating Stack..." << endl;
-	Stack S= CreateStack();
+	Stack S= CreateStack(11);
 	for (int i = 0; i < 10; i++)
 	{
 		cout << "Push " << i<<"..."<<endl;

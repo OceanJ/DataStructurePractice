@@ -64,9 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Stack_Array.h" />
     <ClInclude Include="Stack_List.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Stack_Array.cpp" />
     <ClCompile Include="Stack_List.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
