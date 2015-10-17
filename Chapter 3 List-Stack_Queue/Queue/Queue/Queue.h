@@ -10,6 +10,7 @@ struct QueueRecord
 	int Capacity;
 	int Front;
 	int Rear;
+	int Size;
 	ElementType* Array;
 	
 };
