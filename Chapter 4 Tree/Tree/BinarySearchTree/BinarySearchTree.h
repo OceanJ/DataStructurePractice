@@ -1,8 +1,15 @@
+#include <iostream>
+using namespace std;
 
 #ifndef Binary_Search_Tree_H
 #define Binary_Search_Tree_H
 typedef int ElementType;
-struct TreeNode;
+struct TreeNode
+{
+	ElementType Element;
+	TreeNode * Left;
+	TreeNode  * Right;
+};
 typedef struct TreeNode *Position;
 typedef struct TreeNode *SearchTree;
 
