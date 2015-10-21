@@ -1,4 +1,5 @@
 #include "BinarySearchTree.h"
+
 //void PrintTree(SearchTree T)
 //{
 //	if (!T)
@@ -10,25 +11,28 @@
 //}
 int main()
 {
-	SearchTree TestTree=new TreeNode;
+	SearchTree TestTree=NULL;
 	for (int i = 0; i < 10; i++)
 	{
-		cout << "Insert " << i<<endl;
-		Insert(i, TestTree);
-		int succeed = Find(i, TestTree)!=NULL;
-		cout << "Succeed? " << succeed;
+
+		TestTree=Insert(i, TestTree);
+		cout << "Find Succeed? " << Retrieve(Find(i, TestTree))<<endl;
 	}
-	cout << "The Min is " << FindMin(TestTree)<<endl;
-	cout << "The Max is " << FindMax(TestTree);
+	cout << "The Min is " << Retrieve(FindMin(TestTree)) << endl;
+	cout << "The Max is " << Retrieve(FindMax(TestTree))<<endl;
 	for (int i = 5; i < 10; i++)
 	{
 		cout << "Delete " << i << endl;
-		Insert(i, TestTree);
-		int succeed = Find(i, TestTree) == NULL;
-		cout << "Succeed? " << succeed;
+		TestTree = Delete(i, TestTree);
+		cout << "Find Succeed? " << Retrieve(Find(i, TestTree)) << endl;
 	}
-	cout << "Make Empty!" << endl;
-	MakeEmpty(TestTree);
-	cout << "Succeed! Good bye!" << endl;
-
+	TestTree = Delete(9, TestTree);
+	cout << "Find Succeed? " << Retrieve(Find(9, TestTree)) << endl;
+	cout << "Make empty!" << endl;
+	TestTree=MakeEmpty(TestTree);
+	
+	cout << "Succeed? " << Retrieve(TestTree)<< endl;
+	cout << "Good bye!" << endl;
+	cout<<Retrieve(TestTree);
+	getchar();
 }
