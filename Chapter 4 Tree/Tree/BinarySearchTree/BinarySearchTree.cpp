@@ -1,5 +1,6 @@
 #include "BinarySearchTree.h"
 
+//To make the tree empty
 SearchTree MakeEmpty(SearchTree T)
 {
 	if (T != NULL)
@@ -47,7 +48,7 @@ SearchTree Insert(ElementType X, SearchTree T)
 {
 	if (T == NULL)
 	{
-		//既防止了T本身为空，又为递归终点。
+		//Recursion base case 
 		T = new TreeNode;
 		if (T == NULL)
 		{
@@ -56,80 +57,48 @@ SearchTree Insert(ElementType X, SearchTree T)
 		}
 		T->Element = X;
 		T->Left = T->Right = NULL;
-		//思考为何不在这返回T？
 	}
 	else if (X < T->Element)
 		T->Left=Insert(X, T->Left);
 	//啊啊啊 找了好久的Bug！！！
-	//注意要把Insert返回值给到左树。
+	//Attention:the return value must assign to itself
+	//注意要把Insert返回值给到左树本身。
 	else if (X > T->Element)
 		T->Right=Insert(X, T->Right);
-	//注意要把Insert返回值给到右树。	
+	//注意要把Insert返回值给到右树本身。	
 	return T;
 }
-SearchTree
-Delete(ElementType X, SearchTree T)
-{
-	Position TmpCell;
 
+SearchTree Delete(ElementType X, SearchTree T)
+{
 	if (T == NULL)
 	{
-		cerr << "Element not found" << endl;
-		return T;
+		cerr << "Can't find "<< X<<endl;
+		return NULL;
 	}
-	else
-	if (X < T->Element)  /* Go left */
+	else if (X < T->Element)
+		//Go Left
 		T->Left = Delete(X, T->Left);
-	else
-	if (X > T->Element)  /* Go right */
+	else if (X > T->Element)
+		//Go Right
 		T->Right = Delete(X, T->Right);
-	else  /* Found element to be deleted */
-	if (T->Left && T->Right)  /* Two children */
-	{
-		/* Replace with smallest in right subtree */
-		TmpCell = FindMin(T->Right);
-		T->Element = TmpCell->Element;
+	//Has found the element to be deleted
+	else if (T->Left && T->Right)//Has two children
+	{	
+		//Replace its value with the min in right subtree
+		T->Element = Retrieve(FindMin(T->Right));
+		//Delete the min node in the right subtree
 		T->Right = Delete(T->Element, T->Right);
 	}
-	else  /* One or zero children */
+	else //One or zero children
 	{
-		TmpCell = T;
-		if (T->Left == NULL) /* Also handles 0 children */
-			T = T->Right;
-		else if (T->Right == NULL)
-			T = T->Left;
+		Position TmpCell = T;
+		//Also handles zero children
+		T= T->Left ? T->Left : T->Right;
 		free(TmpCell);
 	}
-
-	return T;
+	return T;//Don't forget to return T !!!
 }
-// My failure code 
-//SearchTree Delete(ElementType X, SearchTree T)
-//{
-//	Position P = Find(X, T);
-//	if (P == NULL)
-//	{
-//		cerr << "X is not in this binary search tree!" << endl;
-//		return T;
-//	}
-//	else if (P->Left == NULL&&P->Right == NULL)
-//		free(P);
-//	else if (P->Left == NULL||P->Right==NULL)
-//	{
-//		Position TmpPosition = P->Left?P->Left:P->Right;
-//		P->Element = TmpPosition->Element;
-//		P->Left = TmpPosition->Left;
-//		P->Right = TmpPosition->Right;
-//		free(TmpPosition);
-//	}
-//	else
-//	{
-//		Position MinPositon = FindMin(P->Right);
-//		P->Element = MinPositon->Element;
-//		MinPositon=Delete(MinPositon->Element,MinPositon);
-//	}
-//	return T;	
-//}
 
 ElementType Retrieve(Position P)
 {
