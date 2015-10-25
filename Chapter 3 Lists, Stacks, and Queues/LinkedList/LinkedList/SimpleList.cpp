@@ -1,4 +1,5 @@
 #include "SimpleList.h"
+
 List MakeEmpty(List L)
 {
 	if (L != NULL)
@@ -6,7 +7,7 @@ List MakeEmpty(List L)
 	L = (List)malloc(sizeof(Node));
 	if (L == NULL)
 	{
-		printf("Out Of Space");
+		cout<<"Out Of Space!!!"<<endl;
 		return NULL;
 	}
 	L->Next = NULL;
@@ -56,13 +57,13 @@ void DeleteFromValue(ElementType X, List L)
 		free(TmpCell);
 	}
 }
-
+/*Insert after legal position P*/
 void Insert(ElementType X, List L, Position P)
 {
 	Position TmpCell = (Position)malloc(sizeof(struct Node));
 	if (TmpCell == NULL)
 	{
-		printf("Out of Space");
+		cout << "Out of Space" << endl;
 		exit(-1);
 	}
 	TmpCell->Element = X;
@@ -94,7 +95,7 @@ Position Advance(Position P)
 {
 	return P->Next;
 }
-//ElementType Retrieve(Position P)
-//{
-//	return P->Element;
-//}
+ElementType Retrieve(Position P)
+{
+	return P->Element;
+}

@@ -67,6 +67,7 @@
     <ClInclude Include="SimpleList.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Extend.cpp" />
     <ClCompile Include="SimpleList.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>

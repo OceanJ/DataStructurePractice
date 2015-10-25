@@ -1,7 +1,9 @@
 /* Assumption of header use */
 #ifndef _SimpleList_H
-#include <stdio.h>
-#include  <stdlib.h>
+
+#include <iostream>
+using namespace std;
+
 typedef int ElementType;
 
 typedef struct Node
@@ -25,5 +27,14 @@ Position Header(List L);
 Position First(List L);
 Position Advance(Position P);
 ElementType Retrieve(Position P);
+
+
+/*Some exercise function  */
+
+void PrintLots(List L, List P);
+void SwapWithNext(Position BeforeP, List L);
+List Intersect(List L1, List L2);
+List Union(List L1, List L2);
+List ReverseList(List L);
 
 #endif
