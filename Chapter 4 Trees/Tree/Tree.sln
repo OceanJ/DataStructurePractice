@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.vcxproj", "{6FB2B6D8-70FB-4B47-BCB8-F5F0230CC05E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVLTree", "AVLTree\AVLTree.vcxproj", "{499D2258-C474-4195-AA95-7163873248D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +17,10 @@ Global
 		{6FB2B6D8-70FB-4B47-BCB8-F5F0230CC05E}.Debug|Win32.Build.0 = Debug|Win32
 		{6FB2B6D8-70FB-4B47-BCB8-F5F0230CC05E}.Release|Win32.ActiveCfg = Release|Win32
 		{6FB2B6D8-70FB-4B47-BCB8-F5F0230CC05E}.Release|Win32.Build.0 = Release|Win32
+		{499D2258-C474-4195-AA95-7163873248D5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{499D2258-C474-4195-AA95-7163873248D5}.Debug|Win32.Build.0 = Debug|Win32
+		{499D2258-C474-4195-AA95-7163873248D5}.Release|Win32.ActiveCfg = Release|Win32
+		{499D2258-C474-4195-AA95-7163873248D5}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
