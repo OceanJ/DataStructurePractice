@@ -2,7 +2,8 @@
 #ifndef _AvlTree_H
 #define _AvlTree_H
 typedef int ElementType;
-
+#include <iostream>
+using namespace std;
 struct AvlNode
 {
 	ElementType Element;

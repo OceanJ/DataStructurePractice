@@ -67,6 +67,9 @@
   <ItemGroup>
     <ClInclude Include="AvlTree.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AvlTreecpp.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
