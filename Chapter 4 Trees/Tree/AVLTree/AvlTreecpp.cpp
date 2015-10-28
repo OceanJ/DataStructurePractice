@@ -2,11 +2,45 @@
 
 AvlTree MakeEmpty(AvlTree T)
 {
-	
+	if (T != NULL)
+	{
+		free(T->Left);
+		free(T->Right);
+		free(T);
+	}
+	return NULL;
 }
-Position Find(ElementType X, AvlTree T);
-Position FindMin(AvlTree T);
-Position FindMax(AvlTree T);
+Position Find(ElementType X, AvlTree T)
+{
+	if (T == NULL)
+	{
+		cerr << "Can't find " << X << endl;
+		return NULL;
+	}
+	else if (X < T->Element)
+		return Find(X, T->Left);
+	else if (X>T->Element)
+		return Find(X, T->Right);
+	else return T;
+}
+Position FindMin(AvlTree T)
+{
+	if (T == NULL)
+		return NULL;
+	else if (T->Left == NULL)
+		return T;
+	else
+		return FindMin(T->Left);
+}
+Position FindMax(AvlTree T)
+{
+	if (T == NULL)
+		return NULL;
+	else if (T->Right == NULL)
+		return T;
+	else
+		return FindMin(T->Right);
+}
 int Max(int a, int b)
 {
 	return a > b ? a : b;
@@ -56,13 +90,63 @@ AvlTree DoubleRoatateWithRight(AvlTree K3)
 }
 
 AvlTree Insert(ElementType X, AvlTree T)
-{//Todo here!
-	/*
+{
 	if (T == NULL)
 	{
 		T = new AvlNode;
-		
-	}*/
+		if (T == NULL)
+		{
+			cerr << "Out of space!!!" << endl;
+			return NULL;
+		}
+		T->Element = X;
+		T->Height = 0;
+		T->Left = T->Right = NULL;
+	}
+	else if (X < T->Element)
+	{
+		T->Left = Insert(X, T->Left);
+		if (Height(T->Left) - Height(T->Right) == 2)
+		{
+			//Simplify the way to judge
+			//if (Height(T->Left->Left)>Height(T->Left->Right))
+			if (X<T->Left->Element)
+				T = SingleRoatateWithLeft(T);
+			else
+				T = DoubleRoatateWithLeft(T);
+		}
+	}
+	else if (X > T->Element)
+	{
+		T->Right= Insert(X, T->Right);
+		if (Height(T->Right) - Height(T->Left) == 2)
+		{
+			//if (Height(T->Right->Left)<Height(T->Left->Right))
+			if (X>T->Right->Element)
+				T = SingleRoatateWithRight(T);
+			else
+				T = DoubleRoatateWithRight(T);
+		}
+	}
+	//If X=T->Element,  just ignore it...
+	T->Height = Max(Height(T->Left), Height(T->Right))+1;
+	//Notice :Must plus one ...
+	
+	return T;
 }
-AvlTree Delete(ElementType X, AvlTree T);
-ElementType Retrieve(Position P);
+
+AvlTree Delete(ElementType X, AvlTree T)
+{
+  //Todo
+}
+
+ElementType Retrieve(Position P)
+{
+	if (!P)
+	{
+		cerr << "The position is invalid!" << endl;
+		return 0;
+	}
+	else
+		return P->Element;
+}
