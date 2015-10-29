@@ -4,8 +4,8 @@ AvlTree MakeEmpty(AvlTree T)
 {
 	if (T != NULL)
 	{
-		free(T->Left);
-		free(T->Right);
+		MakeEmpty(T->Left);
+		MakeEmpty(T->Right);
 		free(T);
 	}
 	return NULL;
@@ -23,23 +23,46 @@ Position Find(ElementType X, AvlTree T)
 		return Find(X, T->Right);
 	else return T;
 }
+//Use  recursion method 
+
+//Position FindMin(AvlTree T)
+//{
+//	if (T == NULL)
+//		return NULL;
+//	else if (T->Left == NULL)
+//		return T;
+//	else
+//		return FindMin(T->Left);
+//}
+//Position FindMax(AvlTree T)
+//{
+//	if (T == NULL)
+//		return NULL;
+//	else if (T->Right == NULL)
+//		return T;
+//	else
+//		return FindMin(T->Right);
+//}
+
+//Use Loop Method 
 Position FindMin(AvlTree T)
 {
-	if (T == NULL)
-		return NULL;
-	else if (T->Left == NULL)
-		return T;
-	else
-		return FindMin(T->Left);
+	if (T)
+	{
+		while (T->Left)
+			T = T->Left;
+	}
+	return T;
 }
 Position FindMax(AvlTree T)
 {
-	if (T == NULL)
-		return NULL;
-	else if (T->Right == NULL)
-		return T;
-	else
-		return FindMin(T->Right);
+
+	if (T)
+	{
+		while (T->Right)
+			T = T->Right;
+	}
+	return T;
 }
 int Max(int a, int b)
 {
@@ -52,28 +75,29 @@ int Height(Position P)
 	else
 		return P->Height;
 }
-AvlTree SingleRoatateWithLeft(AvlTree K2)
+int  UpdateHeight(Position P)
+{
+	P->Height = Max(Height(P->Left), Height(P->Right)) + 1;
+	return P->Height;
+}
+Position SingleRoatateWithLeft(Position K2)
 {
 	Position K1 = K2->Left;
 	K2->Left = K1->Right;
 	K1->Right = K2;
-
-	K2->Height = Max(Height(K2->Left), Height(K2->Right)) + 1;
-	K1->Height = Max(Height(K1->Left), Height(K2)) + 1;
-
-	return K2;
+	UpdateHeight(K2);
+	UpdateHeight(K1);
+	return K1;
 }
 
-AvlTree SingleRoatateWithRight(AvlTree K2)
+Position SingleRoatateWithRight(Position K2)
 {
 	Position K1 = K2->Right;
 	K2->Right = K1->Left;
-	K1->Right = K2;
-
-	K2->Height = Max(Height(K2->Left), Height(K2->Right)) + 1;
-	K1->Height = Max(Height(K1->Left), Height(K2)) + 1;
-
-	return K2;
+	K1->Left = K2;
+	UpdateHeight(K2);
+	UpdateHeight(K1);
+	return K1;
 }
 
 AvlTree DoubleRoatateWithLeft(AvlTree K3)
@@ -129,17 +153,57 @@ AvlTree Insert(ElementType X, AvlTree T)
 		}
 	}
 	//If X=T->Element,  just ignore it...
-	T->Height = Max(Height(T->Left), Height(T->Right))+1;
-	//Notice :Must plus one ...
+	UpdateHeight(T);
+	//Notice :Must update height ...
 	
 	return T;
 }
 
 AvlTree Delete(ElementType X, AvlTree T)
 {
-  //Todo
-}
+	if (T == NULL)
+	{
+		cerr << "Can't find " << X << endl;
+		return NULL;
+	}
+	else if (X < T->Element)
+	{
+		T->Left = Delete(X, T->Left);
+		if (Height(T->Right) - Height(T->Left) == 2)
+		{
+			if (X>T->Left->Element)
+				T->Left = SingleRoatateWithLeft(T->Left);
+			else
+				T->Left = DoubleRoatateWithLeft(T->Left);
+		}
+	}
+	else if (X > T->Element)
+	{
+		T->Right = Delete(X, T->Right);
+		if (Height(T->Left) - Height(T->Right) == 2)
+		{
+			if (X<T->Right->Element)
+				T->Right = SingleRoatateWithRight(T->Right);
+			else
+				T->Right= DoubleRoatateWithRight(T->Right);
+		}
+	}
+	else if (T->Left&&T->Right)
+	{
+		T->Element = Retrieve(FindMin(T->Right));
+		T->Right = Delete(T->Element, T->Right);
+	}
+	else
+	{
+		Position TmpCell = T;
+		T = T->Left ? T->Left : T->Right;
+		free(TmpCell);
+	}
 
+	UpdateHeight(T);
+	return T;
+}
+//Reference :http://www.geeksforgeeks.org/avl-tree-set-2-deletion/
 ElementType Retrieve(Position P)
 {
 	if (!P)
