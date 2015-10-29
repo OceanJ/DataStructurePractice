@@ -1,40 +1,45 @@
 #include "BinarySearchTree.h"
 
-//void PrintTree(SearchTree T)
-//{
-//	if (!T)
-//	{
-//		cout << "\t\t"<<T->Element<<"\t\t";
-//		PrintTree(T->Left);
-//		PrintTree(T->Right);
-//	}
-//}
+void PrintTree(SearchTree T)
+{
+	if (T)
+	{
+		cout << T->Element << "  ";
+		PrintTree(T->Left);
+		PrintTree(T->Right);
+	}
+}
 int main()
 {
-	SearchTree TestTree=NULL;
-	for (int i = 0; i < 10; i++)
-	{
-		cout << "Insert " << i << " and " << -i << endl;
-		TestTree=Insert(i, TestTree);
-		TestTree = Insert(-i, TestTree);
-		bool Success = Retrieve(Find(i, TestTree)) == i&&
-			Retrieve(Find(-i, TestTree)) == -i;
-		cout << "Find Succeed? " << Success<<endl;
-	}
-	cout << "The Min is " << Retrieve(FindMin(TestTree))<<endl;
-	cout << "The Max is " << Retrieve(FindMax(TestTree))<<endl;
-	for (int i = 5; i < 10; i++)
-	{
-		cout << "Delete " << i << endl;
-		TestTree = Delete(i, TestTree);
-		bool Success = Retrieve(Find(i, TestTree)) == i;
-		cout << "Find Succeed? " << Success<< endl;
-	}
+	SearchTree TestTree = NULL;
+	TestTree = Insert(6, TestTree);
+	TestTree = Insert(2, TestTree);
+	TestTree = Insert(8, TestTree);
+	TestTree = Insert(1, TestTree);
+	TestTree = Insert(4, TestTree);
+	TestTree = Insert(3, TestTree);
 
-	cout << "Make empty!" << endl;
-	TestTree=MakeEmpty(TestTree);
-	int Succes = TestTree == NULL;
-	cout << "Succeed? " << endl;
+	PrintTree(TestTree);
+	cout << "\nThe Min is " << Retrieve(FindMin(TestTree)) << endl;
+	cout << "The Max is " << Retrieve(FindMax(TestTree)) << endl;
+	cout << "Now delete 4(with one child node)" << endl;
+	TestTree = Delete(4, TestTree);
+	PrintTree(TestTree);
+	cout << "\nNow delete 3(with none child node)" << endl;
+	TestTree = Delete(3, TestTree);
+	PrintTree(TestTree);
+	cout << "\nNow insert 5,3,4 " << endl;
+	TestTree = Insert(5, TestTree);
+	TestTree = Insert(3, TestTree);
+	TestTree = Insert(4, TestTree);
+	PrintTree(TestTree);
+	cout << "\nNow delete 5(with two child node)" << endl;
+	TestTree = Delete(5, TestTree);
+	PrintTree(TestTree);
+	cout << "\nMake empty!" << endl;
+	TestTree = MakeEmpty(TestTree);
+	int Success = TestTree == NULL;
+	cout << "Succeed? " << Success<<endl;
 	cout << "Good bye!" << endl;
 	getchar();
 }
