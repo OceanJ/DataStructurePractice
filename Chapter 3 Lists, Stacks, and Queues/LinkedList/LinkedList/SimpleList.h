@@ -29,7 +29,7 @@ Position Advance(Position P);
 ElementType Retrieve(Position P);
 
 
-/*Some exercise function  */
+/*Some extend function  */
 
 void PrintLots(List L, List P);
 void SwapWithNext(Position BeforeP, List L);
