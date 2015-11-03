@@ -1,6 +1,6 @@
 #include"SimpleSorting.h"
 
-ElementType * InsertionSort(ElementType  A[],int N)
+void InsertionSort(ElementType  A[],int N)
 {
 	for (int i = 1; i < N; i++)
 	{
@@ -10,12 +10,11 @@ ElementType * InsertionSort(ElementType  A[],int N)
 			A[j] = A[j - 1];
 		A[j] = Tmp;
 	}
-	return A;
 }
 
-ElementType * SelectionSort(ElementType A[], int N)
+void SelectionSort(ElementType A[], int N)
 {
-	for (int i = 1; i < N; i++)
+	for (int i = 0; i < N; i++)
 	{
 		int MinIndex = i;
 		for (int j = i; j < N; j++)
@@ -27,10 +26,9 @@ ElementType * SelectionSort(ElementType A[], int N)
 		A[i] = A[MinIndex];
 		A[MinIndex] = Tmp;
 	}
-	return A;
 }
 
-ElementType * BobbleSort(ElementType A[],int N)
+void BubbleSort(ElementType A[],int N)
 {
 	for (int i = 0; i < N - 1; i++)
 	{
@@ -40,9 +38,8 @@ ElementType * BobbleSort(ElementType A[],int N)
 			{
 				ElementType Tmp = A[j];
 				A[j] = A[j + 1];
-				A[j + 1] = A[j];
+				A[j + 1] = Tmp;
 			}
 		}
 	}
-	return A;
 }

@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestSort.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="SimpleSorting.h">
       <Filter>头文件</Filter>
     </ClCompile>
     <ClCompile Include="SimpleSorting.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TestSorting.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

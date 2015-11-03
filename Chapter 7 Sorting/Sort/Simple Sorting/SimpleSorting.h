@@ -1,5 +1,5 @@
 typedef  int ElementType;
 
-ElementType * InsertionSort(ElementType  A[], int N);
-ElementType * SelectionSort(ElementType A[], int N);
-ElementType * BobbleSort(ElementType A[], int N);
+void InsertionSort(ElementType  A[], int N);
+void SelectionSort(ElementType A[], int N);
+void BubbleSort(ElementType A[], int N);
