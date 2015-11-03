@@ -64,7 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Simple Sorting.cpp" />
+    <ClCompile Include="SimpleSorting.cpp" />
+    <ClCompile Include="SimpleSorting.h" />
+    <ClCompile Include="TestSort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
