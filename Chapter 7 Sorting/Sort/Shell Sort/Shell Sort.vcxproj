@@ -11,9 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{EC0F97B5-16E9-4C9E-9880-796293C62FED}</ProjectGuid>
-    <RootNamespace>SimpleSorting</RootNamespace>
-    <ProjectName>Simple Sort</ProjectName>
+    <ProjectGuid>{5D796F0D-22A1-4CC3-9B07-DF45E98DACCE}</ProjectGuid>
+    <RootNamespace>ShellSort</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -65,9 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SimpleSorting.cpp" />
-    <ClCompile Include="SimpleSorting.h" />
-    <ClCompile Include="TestSorting.cpp" />
+    <ClCompile Include="ShellSort.cpp" />
+    <ClCompile Include="TestShellSort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ShellSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
