@@ -14,18 +14,27 @@ void Swap(ElementType &A, ElementType &B)
 	A = B;
 	B = Tmp;
 }
+
 void ShellSort(ElementType A[], int N)
 {
-	int i,Increment;
+	int i,j,Increment;
+	ElementType Tmp;
 	for (Increment = N / 2; Increment > 0; Increment /= 2)
 	{
-		for (i = 0; i < N - Increment; i++)
+		for (i = Increment;i < N; i+=Increment)
 		{
-			if (A[i]>A[i + Increment])
-				Swap(A[i], A[Increment]);
+			Tmp = A[i];
+			//相当于对N/Increment个数组执行选择排序
+			for (j = i; j>=Increment; j -= Increment)
+			{
+				if (Tmp < A[j-Increment])
+					A[j] = A[j - Increment];
+				else
+					break;
+			}
+			A[j] = Tmp;				
 		}
 		cout << "Increment: " << Increment;
 		PrintArray(A, N);
 	}
-	
 }

@@ -8,7 +8,7 @@ int main()
 	cout << "Origin State:" << endl;
 	PrintArray(A, N);
 	cout << "After shell sort" << endl;
-	ShellSort(A, N);
+ 	ShellSort(A, N);
 	PrintArray(A, N);
 	getchar();
 }
