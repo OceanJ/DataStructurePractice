@@ -64,6 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MergeSort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MergeSort.cpp" />
+    <ClCompile Include="TestMergeSort.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
