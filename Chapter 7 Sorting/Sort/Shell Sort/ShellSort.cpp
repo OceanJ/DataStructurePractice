@@ -8,12 +8,6 @@ void PrintArray(ElementType A[], int N)
 	}
 	cout << "}" << endl;
 }
-void Swap(ElementType &A, ElementType &B)
-{
-	ElementType Tmp = A;
-	A = B;
-	B = Tmp;
-}
 
 void ShellSort(ElementType A[], int N)
 {
