@@ -4,14 +4,23 @@ Just some classic codes and problem sets solution from [Data Structures and Algo
 ---
 
 ##TODO List：
-###Week 10(!1/1-11/7)
+###Week 11(11/8-11/15)
+####Chapter 6 Priority Queues (Heaps)
+- [ ] Binary Heap 
+- [ ] Leftist Heap
+- [ ] Binomial Queue(Forest)  
+- [ ] Problem Set 6
+- [ ] Heap Sort
+- [ ] Problem Set 7
+####Some PPT extend contents
+- [ ] Huffman Tree and Huffman Coding
+- [ ] Traversing binary tree
+###Week 10(11/1-11/7)
 #### Chapter 7 Sort
 - [x] Simple Sort Algorithm
 - [x] Shell's Sort
-- [ ] Heap Sort(Maybr Next Week)
-- [ ] Merge Sort
-- [ ] Quick Sort
-- [ ] Bucket Sott
+- [x] Merge Sort
+- [x] Quick Sort
 
 ###Week 9(10/24-10/31)
 #### Chapter 4 Trees
