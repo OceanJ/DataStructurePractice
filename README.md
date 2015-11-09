@@ -12,9 +12,11 @@ Just some classic codes and problem sets solution from [Data Structures and Algo
 - [ ] Problem Set 6
 - [ ] Heap Sort
 - [ ] Problem Set 7
+
 ####Some PPT extend contents
 - [ ] Huffman Tree and Huffman Coding
 - [ ] Traversing binary tree
+
 ###Week 10(11/1-11/7)
 #### Chapter 7 Sort
 - [x] Simple Sort Algorithm
