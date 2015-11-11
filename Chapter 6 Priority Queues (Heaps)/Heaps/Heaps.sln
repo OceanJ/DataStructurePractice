@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Heaps", "Heaps\Heaps.vcxproj", "{009BD8A3-9533-44D4-B0A3-C5DD8F960364}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binary Heap", "Binary Heap\Binary Heap.vcxproj", "{7684AADA-75D4-4069-ACE5-03C4C7DE1B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{009BD8A3-9533-44D4-B0A3-C5DD8F960364}.Debug|Win32.ActiveCfg = Debug|Win32
-		{009BD8A3-9533-44D4-B0A3-C5DD8F960364}.Debug|Win32.Build.0 = Debug|Win32
-		{009BD8A3-9533-44D4-B0A3-C5DD8F960364}.Release|Win32.ActiveCfg = Release|Win32
-		{009BD8A3-9533-44D4-B0A3-C5DD8F960364}.Release|Win32.Build.0 = Release|Win32
+		{7684AADA-75D4-4069-ACE5-03C4C7DE1B0A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7684AADA-75D4-4069-ACE5-03C4C7DE1B0A}.Debug|Win32.Build.0 = Debug|Win32
+		{7684AADA-75D4-4069-ACE5-03C4C7DE1B0A}.Release|Win32.ActiveCfg = Release|Win32
+		{7684AADA-75D4-4069-ACE5-03C4C7DE1B0A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

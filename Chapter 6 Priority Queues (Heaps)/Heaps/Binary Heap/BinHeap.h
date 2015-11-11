@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 typedef int ElementType;
+const ElementType MinElement = -1e8;
 struct HeapStruct
 {
 	int Capacity;
@@ -9,7 +10,7 @@ struct HeapStruct
 	ElementType *Elements;
 };
 
-typedef struct HeapStuct * PriorityQueue;
+typedef struct HeapStruct * PriorityQueue;
 PriorityQueue Initialize(int MaxElements);
 void Destroy(PriorityQueue H);
 void MakeEmpty(PriorityQueue H);
