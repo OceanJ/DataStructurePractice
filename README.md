@@ -6,7 +6,7 @@ Just some classic codes and problem sets solution from [Data Structures and Algo
 ##TODO List：
 ###Week 11(11/8-11/15)
 ####Chapter 6 Priority Queues (Heaps)
-- [ ] Binary Heap 
+- [x] Binary Heap 
 - [ ] Leftist Heap
 - [ ] Binomial Queue(Forest)  
 - [ ] Problem Set 6
