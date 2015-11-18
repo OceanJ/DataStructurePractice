@@ -4,9 +4,9 @@ Just some classic codes and problem sets solution from [Data Structures and Algo
 ---
 
 ##TODO List：
-###Week 11(11/8-11/15)
-####Chapter 6 Priority Queues (Heaps)
-- [x] Binary Heap 
+
+###Week 12(11/16-11/21)
+####Chapter 6 Priority Queues (Heap)
 - [ ] Leftist Heap
 - [ ] Binomial Queue(Forest)  
 - [ ] Problem Set 6
@@ -17,6 +17,12 @@ Just some classic codes and problem sets solution from [Data Structures and Algo
 - [ ] Huffman Tree and Huffman Coding
 - [ ] Traversing binary tree
 
+
+###Week 11(11/8-11/15)
+####Chapter 6 Priority Queues (Heaps)
+
+Inefficiency week...
+- [x] Binary Heap  
 ###Week 10(11/1-11/7)
 #### Chapter 7 Sort
 - [x] Simple Sort Algorithm
