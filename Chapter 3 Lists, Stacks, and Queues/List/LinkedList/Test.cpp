@@ -1,4 +1,4 @@
-#include "SimpleList.h"
+#include "LinkedList.h"
 
 void PrintList(List L)
 {
@@ -13,6 +13,7 @@ void PrintList(List L)
 }
 void TestBasalOperation()
 {
+	cout << "Now test the bascal operation"<< endl;
 	List TestList = NULL;
 	TestList = MakeEmpty(TestList);
 	Position P = TestList;
@@ -38,6 +39,7 @@ void TestBasalOperation()
 
 void TestSwapWithNext()
 {
+	cout << "\nNow test swap two element" << endl;
 	List TestList = MakeEmpty(NULL);
 	Position P = TestList;
 	for (int i = 1; i < 5; i++)
@@ -55,7 +57,7 @@ void TestReverseList()
 {
 	List TestList = MakeEmpty(NULL);
 	Position P = TestList;
-	cout << "Now test reverse list" << endl;
+	cout << "\nNow test reverse list" << endl;
 	for (int i = 1; i < 5; i++)
 	{
 		Insert(i*i, TestList, P);
@@ -73,7 +75,7 @@ void TestIntersectAndUnion()
 {
 	List L1 = MakeEmpty(NULL);
 	List L2 = MakeEmpty(NULL);
-	cout << "Now test list intersect and union !" << endl;
+	cout << "\nNow test list intersect and union !" << endl;
 	Position P1 = L1, P2 = L2;
 	for (int i = 1; i < 10; i++)
 	{

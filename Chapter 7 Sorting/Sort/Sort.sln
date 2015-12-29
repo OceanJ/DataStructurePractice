@@ -5,13 +5,15 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RadixSort", "RadixSort\RadixSort.vcxproj", "{729CFBE6-9CDC-4CEC-BCE0-FB445F5B2033}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple Sort", "Simple Sorting\Simple Sorting.vcxproj", "{EC0F97B5-16E9-4C9E-9880-796293C62FED}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shell Sort", "Shell Sort\Shell Sort.vcxproj", "{5D796F0D-22A1-4CC3-9B07-DF45E98DACCE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Merge Sort", "Merge Sort\Merge Sort.vcxproj", "{95775194-BCEF-41E1-ADD8-82869A6F30AF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quick Sort", "Quick Sort\Quick Sort.vcxproj", "{D2058BDA-1F22-4039-A8C2-776A34634D37}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Heap Sort", "Heap Sort\Heap Sort.vcxproj", "{63026E7E-79BE-4A67-AE86-14E689D9AC30}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple Sort", "Simple Sort\SimpleSort.vcxproj", "{61066820-CAF8-4BD5-9656-7FEB289BE713}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,6 @@ Global
 		{729CFBE6-9CDC-4CEC-BCE0-FB445F5B2033}.Debug|Win32.Build.0 = Debug|Win32
 		{729CFBE6-9CDC-4CEC-BCE0-FB445F5B2033}.Release|Win32.ActiveCfg = Release|Win32
 		{729CFBE6-9CDC-4CEC-BCE0-FB445F5B2033}.Release|Win32.Build.0 = Release|Win32
-		{EC0F97B5-16E9-4C9E-9880-796293C62FED}.Debug|Win32.ActiveCfg = Debug|Win32
-		{EC0F97B5-16E9-4C9E-9880-796293C62FED}.Debug|Win32.Build.0 = Debug|Win32
-		{EC0F97B5-16E9-4C9E-9880-796293C62FED}.Release|Win32.ActiveCfg = Release|Win32
-		{EC0F97B5-16E9-4C9E-9880-796293C62FED}.Release|Win32.Build.0 = Release|Win32
 		{5D796F0D-22A1-4CC3-9B07-DF45E98DACCE}.Debug|Win32.ActiveCfg = Debug|Win32
 		{5D796F0D-22A1-4CC3-9B07-DF45E98DACCE}.Debug|Win32.Build.0 = Debug|Win32
 		{5D796F0D-22A1-4CC3-9B07-DF45E98DACCE}.Release|Win32.ActiveCfg = Release|Win32
@@ -39,6 +37,14 @@ Global
 		{D2058BDA-1F22-4039-A8C2-776A34634D37}.Debug|Win32.Build.0 = Debug|Win32
 		{D2058BDA-1F22-4039-A8C2-776A34634D37}.Release|Win32.ActiveCfg = Release|Win32
 		{D2058BDA-1F22-4039-A8C2-776A34634D37}.Release|Win32.Build.0 = Release|Win32
+		{63026E7E-79BE-4A67-AE86-14E689D9AC30}.Debug|Win32.ActiveCfg = Debug|Win32
+		{63026E7E-79BE-4A67-AE86-14E689D9AC30}.Debug|Win32.Build.0 = Debug|Win32
+		{63026E7E-79BE-4A67-AE86-14E689D9AC30}.Release|Win32.ActiveCfg = Release|Win32
+		{63026E7E-79BE-4A67-AE86-14E689D9AC30}.Release|Win32.Build.0 = Release|Win32
+		{61066820-CAF8-4BD5-9656-7FEB289BE713}.Debug|Win32.ActiveCfg = Debug|Win32
+		{61066820-CAF8-4BD5-9656-7FEB289BE713}.Debug|Win32.Build.0 = Debug|Win32
+		{61066820-CAF8-4BD5-9656-7FEB289BE713}.Release|Win32.ActiveCfg = Release|Win32
+		{61066820-CAF8-4BD5-9656-7FEB289BE713}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

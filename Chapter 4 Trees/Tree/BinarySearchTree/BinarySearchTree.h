@@ -20,5 +20,13 @@ Position FindMax(SearchTree T);
 SearchTree Insert(ElementType X, SearchTree T);
 SearchTree Delete(ElementType X, SearchTree T);
 ElementType Retrieve(Position P);
+//前序遍历
+void PreOrder(SearchTree T);
+//中序遍历
+void InOrder(SearchTree T);
+//后序遍历
+void PostOrder(SearchTree T);
+//求高
+int CalHeight(SearchTree T);
 
 #endif  

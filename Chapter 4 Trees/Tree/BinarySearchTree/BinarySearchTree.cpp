@@ -5,6 +5,7 @@ SearchTree MakeEmpty(SearchTree T)
 {
 	if (T != NULL)
 	{
+		//类似后序遍历
 		MakeEmpty(T->Left);
 		MakeEmpty(T->Right);
 		free(T);
@@ -108,4 +109,49 @@ ElementType Retrieve(Position P)
 		return 0;
 	}
 	else return P->Element;
+}
+
+
+//前序遍历
+void PreOrder(SearchTree T)
+{
+	if (T)
+	{
+		cout << T->Element << "  ";
+		InOrder(T->Left);
+		InOrder(T->Right);
+	}
+}
+//中序遍历
+void InOrder(SearchTree T)
+{
+	if (T)
+	{
+		InOrder(T->Left);
+		cout << T->Element << "  ";
+		InOrder(T->Right);
+	}
+}
+//后序遍历
+void PostOrder(SearchTree T)
+{
+	if (T)
+	{
+		InOrder(T->Left);
+		InOrder(T->Right);
+		cout << T->Element << "  ";
+	}
+}
+//递归求二叉树高度（动态规划）
+int CalHeight(SearchTree T)
+{
+	int CurrentHeight,LeftHegiht,RightHeight;
+	//设置递归终点
+	if (!T)
+		return 0;
+	LeftHegiht = CalHeight(T->Left);
+	RightHeight = CalHeight(T->Right);
+	//树高为其左子树和右子树高中较大者加1
+	CurrentHeight = (LeftHegiht > RightHeight ? LeftHegiht : RightHeight) + 1;
+	return CurrentHeight;
 }

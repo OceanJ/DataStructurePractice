@@ -1,5 +1,4 @@
-#include "SimpleList.h"
-
+#include "LinkedList.h"
 /*打印L中那些由P所指定的位置上的元素 （P元素以升序排列）
   例如 p=1,3,5,7 则打印L中第1、第3、第5和第7个元素 
   复杂度为O(L+P)

@@ -64,11 +64,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="SimpleList.h" />
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Extend.cpp" />
-    <ClCompile Include="SimpleList.cpp" />
+    <ClCompile Include="Extends.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

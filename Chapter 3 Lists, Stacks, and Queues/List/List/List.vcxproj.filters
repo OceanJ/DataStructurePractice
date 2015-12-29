@@ -15,14 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SimpleSorting.h">
+    <ClCompile Include="TestArrayList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArrayList.h">
       <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="SimpleSorting.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TestSorting.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    </ClInclude>
   </ItemGroup>
 </Project>

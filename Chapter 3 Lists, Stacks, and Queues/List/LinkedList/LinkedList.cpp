@@ -1,4 +1,4 @@
-#include "SimpleList.h"
+#include "LinkedList.h"
 
 List MakeEmpty(List L)
 {
